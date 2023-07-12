@@ -16,7 +16,17 @@
 
  - The project can be further improved by adding the necessary functionality such as handle font style..etc.
  - Another thing that could be useful is integrating the application with Database to save the template's title and body MongoDB is a valid option.
- - Moreover, adding an additional page to preview the text along with and edit page will improve the project significantly.
+ - Moreover, adding an additional page to preview the text along with an edit page will improve the project significantly.
 
-* These above are todo for further improvement to the project.
+** These above are to do for further improvement to the project.
 
+# Installation
+
+  - start by cloning the repository into your local environment.
+
+        https://github.com/gani1000/auth-login.git
+
+  - install all the necessary dependencies.
+
+         npm install
+  
