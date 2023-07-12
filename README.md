@@ -11,3 +11,12 @@
 # Capture on Small-size
 
 ![7](https://github.com/gani1000/text-editor/assets/107857762/1766db15-9e67-47fd-920b-1dd3b382689a)
+
+# Further improvements
+
+ - The project can be further improved by adding the necessary functionality such as handle font style..etc.
+ - Another thing that could be useful is integrating the application with Database to save the template's title and body MongoDB is a valid option.
+ - Moreover, adding an additional page to preview the text along with and edit page will improve the project significantly.
+
+* These above are todo for further improvement to the project.
+
