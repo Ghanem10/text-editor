@@ -1,0 +1,292 @@
+// 1st: #0d1117, 2nd: #161b22, 3nd: #010409, text: #7d8590
+$font2:-apple-system,BlinkMacSystemFont,"Segoe UI",
+"Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+$transition: 0.3s ease-in-out all;
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    color: white;
+    width: 90%;
+    height: auto;
+    margin-top: 3rem;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.199);
+    
+    .table-temp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: white;
+        width: 100%;
+        height: auto;
+        gap: 50px;
+        border-radius: 6px;
+
+        .text-editor,
+        .bar {
+            border-radius: 4px;
+        }
+        
+        .text-editor {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            max-height: 74vh;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.192);
+
+            .text-nav {
+                display: flex;
+                flex-direction: row;
+                max-width: 100%;
+                height: auto;
+                padding: 13px;
+                gap: 20px;
+                transition: $transition;
+                background-color: #161b22;
+            
+                .input-title {
+                    max-width: 100%;
+                    background-color: #010409;
+                    font-family: $font2;
+                    font-size: 17px;
+                    border-radius: 5px;
+                    color: #ffffff;
+                    padding: 9px;
+                    outline: none;
+                    border-style: none;
+                    
+                    border: 1px solid rgba(255, 255, 255, 0.192);
+                    &:focus {
+                        border: 1px solid #247afa;
+                    }
+                }
+
+                .font-style {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    color: #ffffff88;
+
+                    .font-s,
+                    .font-icon {
+                        cursor: pointer;
+                        width: 20px;
+                        height: 18px;
+                        &:hover {
+                            color: #247afa;
+                        }
+                    }
+                }
+                @media (min-width: 200px) and (max-width: 870px) {
+                    & {
+                        display: flex;
+                        flex-direction: column;
+                        transition: $transition;
+                        gap: 10px;
+
+                        .container-title,
+                        .font-style {
+                            transition: $transition;
+                            height: 5vh;
+                        }
+
+                        .font-style {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        
+                    }
+                }
+            }
+            
+            textarea {
+                color: #ffffff;
+                max-width: 100%;
+                max-height: 60vh;
+                min-height: 20vh;
+                height: 60vh;
+
+                resize: vertical;
+                border-radius: 3px;
+                font-family: $font2;
+                
+                background-color: #010409;
+                overflow: auto;
+                padding: 10px;
+                outline: none;
+                font-size: 18px;
+                
+                border: 1px solid rgba(255, 255, 255, 0.082);
+                &:focus {
+                    border: 1px solid #247afa;
+                }
+                &::placeholder {
+                    font-size: 15px;
+                    font-family: $font2;
+                    color: #555;
+                }
+            }
+
+            .footer {
+                padding: 8px;
+                background-color: #161b22;
+                color: #aca7a7;
+            }
+
+            @media (min-width: 200px) and (max-width: 600px) {
+                & {
+                    max-width: 100%;
+                }
+            }
+        }
+        .bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $font2;
+            color: #ffffff;
+            padding: 13px;
+            width: 22%;
+            height: 70vh;
+            border: 1px solid rgba(255, 255, 255, 0.199);
+            /*******************/
+            /*******************/
+            /*******************/
+            /*******************/
+            /*******************/
+            /*******************/
+
+
+            .btn-bar {
+                width: 100%;
+                height: 5.5vh;
+                cursor: pointer;
+                border-radius: 5px;
+                outline: none;
+                border-style: none;
+                color: #ffffff;
+                margin-bottom: 1rem;
+                background-color: rgba(6, 197, 6, 0.733);
+
+                .list-icon {
+                    display: none;
+                }
+                &:hover {
+                    transition: $transition;
+                    background-color: rgba(6, 197, 6, 0.959);
+                }
+            }
+            .edit {
+                overflow: auto;
+                height: 60vh;
+                width: 90%;
+                &::-webkit-scrollbar {
+                    width: 6px; 
+                }
+                
+                &::-webkit-scrollbar-track {
+                    background-color: #000000; 
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background-color: #888; 
+                    border-radius: 3px; 
+                }
+                
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: #555;
+                }
+            }
+            .edit-templates {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                width: 90%;
+                height: 5vh;
+                margin-top: .9rem;
+                cursor: pointer;
+                color: #ffffff88;
+                border-left: 3.6px solid rgba(0, 128, 0, 0.651);
+
+                span {
+                    padding: 4px;
+                }
+                .trash-icon {
+                    color: #ffffffb4;
+                    margin-left: auto;
+                    &:hover {
+                        color: #fffffff6;
+                    }
+                }
+                &:hover {
+                    color: #ffffffe5; 
+                    transition: 0.2s ease-in-out all;
+                    border-left: 3.6px solid rgba(2, 250, 2, 0.952);
+                }
+            }
+        }
+        @media (min-width: 0px) and (max-width: 600px) {
+            & {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                margin-top: .5rem;
+                margin-bottom: 0;
+                gap: 8px;
+
+                .text-editor {
+                    width: 100%;
+                }
+                .bar {
+                    width: 100%;
+                    padding: 0;
+                    height: 3vh;
+                    border: transparent;
+                    margin-bottom: 2rem;
+                    .edit-templates {
+                        transition: $transition;
+                        display: none;
+                    }
+                    .btn-bar {
+                        padding: 6px;
+                        width: 100%;
+                        .list-icon {
+                            display: flex;
+                            text-align: center;
+                            width: 20px;
+                            height: 20px;
+                            color: #ffffff;
+                            transition: $transition;
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 0px) and (max-width: 390px) {
+        & {
+            transition: $transition;
+        }
+    }
+}
