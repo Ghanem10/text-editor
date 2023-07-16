@@ -14,7 +14,7 @@
 
 # Further improvements
 
- - The project can be further improved by adding the necessary functionality such as handle font style..etc.
+ - The project can be further improved by adding the necessary functionality that handles the font style..etc.
  - Another thing that could be useful is integrating the application with Database to save the template's title and body MongoDB is a valid option.
  - Moreover, adding an additional page to preview the text along with an edit page will improve the project significantly.
 
